@@ -1,0 +1,863 @@
+/* ══════════════════════════════════════════
+  BetTrend Admin — Design System v2
+   ══════════════════════════════════════════ */
+
+/* ── Variables + shell ── */
+.shell {
+  --bg0: #05070f;
+  --bg1: #08091a;
+  --bg2: #0c1020;
+  --bg3: #111828;
+  --bd: rgba(255,255,255,0.07);
+  --bd2: rgba(255,255,255,0.13);
+  --blue: #2563eb;
+  --blue-s: rgba(37,99,235,0.15);
+  --blue-t: #7aabf7;
+  --green-t: #4ade80;
+  --green-s: rgba(74,222,128,0.13);
+  --red-t: #f87171;
+  --red-s: rgba(248,113,113,0.13);
+  --orange-t: #fb923c;
+  --orange-s: rgba(251,146,60,0.13);
+  --gold-t: #fbbf24;
+  --gold-s: rgba(251,191,36,0.13);
+  --t1: #f1f5f9;
+  --t2: #8899ae;
+  --t3: #4a5a70;
+
+  display: flex;
+  height: 100vh;
+  background: var(--bg0);
+  color: var(--t1);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 240px;
+  flex: none;
+  background: var(--bg1);
+  border-right: 1px solid var(--bd);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebarTop {
+  padding: 20px 16px 16px;
+  border-bottom: 1px solid var(--bd);
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+  color: #fff;
+  flex: none;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logoName {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--t1);
+  line-height: 1;
+}
+
+.logoSub {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--t3);
+  line-height: 1;
+}
+
+.nav {
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--t2);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  position: relative;
+}
+
+.navItem:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--t1);
+}
+
+.navActive {
+  background: var(--blue-s) !important;
+  color: var(--blue-t) !important;
+  font-weight: 600;
+}
+
+.navActive::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: var(--blue);
+  border-radius: 0 3px 3px 0;
+}
+
+.navIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  flex: none;
+}
+
+.navActive .navIcon {
+  opacity: 1;
+}
+
+.navBadge {
+  margin-left: auto;
+  background: var(--orange-s);
+  color: var(--orange-t);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.sidebarBottom {
+  padding: 12px 10px;
+  border-top: 1px solid var(--bd);
+}
+
+.logoutBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--red-t);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.logoutBtn:hover {
+  background: var(--red-s);
+}
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.mainHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 22px;
+  background: var(--bg1);
+  border-bottom: 1px solid var(--bd);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.mainTitle {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--t1);
+  margin: 0;
+}
+
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--bd2);
+  background: rgba(255,255,255,0.04);
+  color: var(--t2);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.refreshBtn:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--t1);
+}
+
+.content {
+  padding: 16px 22px 40px;
+}
+
+/* ── Section titles ── */
+.sectionTitle {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--t3);
+  margin: 20px 0 10px;
+}
+
+.sectionTitle:first-child {
+  margin-top: 0;
+}
+
+/* ── KPI ── */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.kpiGrid6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.kpiCard {
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  padding: 14px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kpiCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--kpi-accent, transparent);
+  border-radius: 10px 10px 0 0;
+}
+
+.kpiVal {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--t1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kpiLabel {
+  font-size: 11px;
+  color: var(--t2);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* ── Revenue cards ── */
+.revenueCard {
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.revenueTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.revenueRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.revenueRow:last-child {
+  border-bottom: none;
+}
+
+/* ── Deposits ── */
+.depositGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.depositCard {
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.depositProofArea {
+  height: 160px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg3);
+  position: relative;
+}
+
+.depositProofArea img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s;
+}
+
+.depositProofArea:hover img {
+  transform: scale(1.04);
+}
+
+.depositProofOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--bg2));
+  pointer-events: none;
+}
+
+.depositBody {
+  padding: 14px 16px;
+}
+
+.depositHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.depositUser {
+  font-weight: 600;
+  color: var(--t1);
+  font-size: 14px;
+}
+
+.depositPhone {
+  font-size: 12px;
+  color: var(--t2);
+  margin-top: 2px;
+}
+
+.depositAmount {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--green-t);
+}
+
+.depositDate {
+  font-size: 11.5px;
+  color: var(--t3);
+  margin-bottom: 10px;
+}
+
+.depositActions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Table ── */
+.tableWrap {
+  overflow-x: auto;
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+  margin-bottom: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table thead tr {
+  background: transparent;
+}
+
+.table th {
+  padding: 9px 14px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 9px 14px;
+  border-top: 1px solid var(--bd);
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.bold { font-weight: 600; color: var(--t1); }
+.dim { color: var(--t2); font-size: 12.5px; }
+.mono { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 13px; }
+.positive { color: var(--green-t); }
+.negative { color: var(--red-t); }
+.warning { color: var(--orange-t); }
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.07);
+  color: var(--t2);
+  white-space: nowrap;
+}
+
+.green { background: var(--green-s); color: var(--green-t); }
+.red   { background: var(--red-s);   color: var(--red-t); }
+.gold  { background: var(--orange-s); color: var(--orange-t); }
+.blue  { background: var(--blue-s);  color: var(--blue-t); }
+
+/* ── Buttons ── */
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:hover { opacity: 0.9; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btnSm {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--bd2);
+  background: rgba(255,255,255,0.04);
+  color: var(--t2);
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.btnSm:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--t1);
+}
+
+.btnDanger {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--red-s);
+  background: var(--red-s);
+  color: var(--red-t);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnDanger:hover { background: rgba(248,113,113,0.22); }
+
+.btnApprove {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(74,222,128,0.25);
+  background: var(--green-s);
+  color: var(--green-t);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnApprove:hover { background: rgba(74,222,128,0.22); }
+
+.btnReject {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(248,113,113,0.25);
+  background: var(--red-s);
+  color: var(--red-t);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnReject:hover { background: rgba(248,113,113,0.22); }
+
+/* ── Overlay / Modal ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: var(--bg3);
+  border: 1px solid var(--bd2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+}
+
+.modalHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.closeBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.07);
+  color: var(--t2);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  transition: background 0.15s;
+}
+
+.closeBtn:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--t1);
+}
+
+.subTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 16px 0 8px;
+}
+
+/* ── Form ── */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formLabel {
+  font-size: 11.5px;
+  color: var(--t2);
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--bd2);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--t1);
+  font-size: 13.5px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin-top: 8px;
+}
+
+.input:focus { border-color: var(--blue); }
+
+/* ── Login ── */
+.loginWrap {
+  min-height: 100vh;
+  background: var(--bg0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginCard {
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: 24px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.loginLogo {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  margin: 0 auto 16px;
+}
+
+.loginTitle {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  text-align: center;
+  color: var(--t1);
+}
+
+.loginSub {
+  text-align: center;
+  color: var(--t2);
+  font-size: 13px;
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+.errMsg {
+  color: var(--red-t);
+  font-size: 12.5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ── Toast ── */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg3);
+  border: 1px solid var(--bd2);
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--t1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  z-index: 9999;
+  animation: fadeup 0.3s both;
+}
+
+@keyframes fadeup {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ── Charts ── */
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.chartWrap {
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 0;
+}
+
+.chartTitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.chartBar {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 80px;
+}
+
+.barCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 3px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 100%;
+  min-width: 4px;
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s;
+}
+
+.barLabel {
+  font-size: 7px;
+  color: var(--t3);
+  white-space: nowrap;
+}
+
+/* ── Alert banners ── */
+.alertBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.alertBanner::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.alertGreen {
+  background: var(--green-s);
+  border: 1px solid rgba(74,222,128,0.25);
+  color: var(--green-t);
+}
+
+.alertGreen::before { background: var(--green-t); }
+
+.alertOrange {
+  background: var(--orange-s);
+  border: 1px solid rgba(251,146,60,0.25);
+  color: var(--orange-t);
+}
+
+.alertOrange::before { background: var(--orange-t); }
+
+.alertRed {
+  background: var(--red-s);
+  border: 1px solid rgba(248,113,113,0.25);
+  color: var(--red-t);
+}
+
+.alertRed::before { background: var(--red-t); }
+
+/* ── Misc ── */
+.spinner {
+  color: var(--t2);
+  padding: 40px;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .shell { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; flex-direction: row; padding: 10px 12px; position: static; overflow-x: auto; }
+  .sidebarTop { display: none; }
+  .nav { flex-direction: row; gap: 4px; padding: 0; flex: unset; }
+  .navItem { white-space: nowrap; font-size: 12px; padding: 8px 10px; }
+  .navIcon { display: none; }
+  .navBadge { display: none; }
+  .sidebarBottom { padding: 0; border-top: none; margin-left: auto; display: flex; align-items: center; }
+  .logoutBtn { padding: 8px 10px; }
+  .content { padding: 14px; }
+  .kpiGrid { grid-template-columns: 1fr 1fr; }
+  .formGrid { grid-template-columns: 1fr; }
+  .depositGrid { grid-template-columns: 1fr; }
+}

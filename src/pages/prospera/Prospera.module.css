@@ -1,0 +1,249 @@
+.heroCard { position:relative; border-radius:20px; padding:22px 20px; background:var(--surface-raised); border:1px solid var(--line); }
+.heroTag { font-size:11px; color:var(--text-low); letter-spacing:0.08em; text-transform:uppercase; display:flex; align-items:center; gap:6px; }
+.heroAmount { font-family:'Sora',sans-serif; font-weight:800; font-size:30px; margin-top:12px; letter-spacing:-0.02em; color:var(--text-hi); }
+.heroSub { font-size:12px; color:var(--text-mid); margin-top:5px; }
+.heroSub b { color:var(--gold); font-weight:600; }
+.heroActions { display:flex; gap:10px; margin-top:18px; }
+.chipRow { display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; margin-top:4px; }
+.chip { flex:none; padding:8px 14px; border-radius:20px; font-size:12px; font-weight:600; background:var(--surface); border:1px solid var(--line); color:var(--text-mid); cursor:pointer; transition:all .18s; }
+.chipActive { background:var(--accent-dim); color:var(--accent); border-color:rgba(79,114,255,0.3); }
+.planCard { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:15px; margin-bottom:12px; animation:rise .4s both; cursor:pointer; }
+.planTop { display:flex; align-items:center; gap:12px; }
+.planIcon { width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:800; flex:none; background:var(--surface-raised); border:1px solid var(--line); color:var(--accent); font-family:'Sora',sans-serif; }
+.planInfo { flex:1; min-width:0; }
+.planName { font-size:13.5px; font-weight:700; font-family:'Sora',sans-serif; }
+.planSub { font-size:11px; color:var(--text-low); margin-top:2px; }
+.planRate { text-align:right; flex:none; }
+.rVal { color:var(--cyan); font-weight:700; font-size:14px; font-family:'Sora',sans-serif; }
+.rLbl { font-size:10px; color:var(--text-low); }
+.planDetails { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-top:12px; }
+.planDetail { text-align:center; }
+.planDetail .dlbl { font-size:9.5px; color:var(--text-low); }
+.planDetail .dval { font-size:12px; font-weight:700; font-family:'Sora',sans-serif; margin-top:2px; }
+.statGrid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.statCard { background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:14px; }
+.lbl { font-size:11px; color:var(--text-low); }
+.val { font-family:'Sora',sans-serif; font-weight:700; font-size:18px; margin-top:5px; }
+.gold { color:var(--gold); }
+.cyan { color:var(--cyan); }
+.invRow { display:flex; align-items:center; gap:12px; padding:12px; border-radius:14px; background:var(--surface); border:1px solid var(--line); margin-bottom:8px; }
+.invIcon { width:38px; height:38px; border-radius:10px; flex:none; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; background:var(--surface-raised); border:1px solid var(--line); font-family:'Sora',sans-serif; color:var(--accent); }
+.invInfo { flex:1; min-width:0; }
+.invName { font-size:13px; font-weight:600; }
+.invDate { font-size:11px; color:var(--text-low); margin-top:2px; }
+.invAmount { font-family:'Sora',sans-serif; font-weight:700; font-size:12.5px; text-align:right; }
+.invEarned { font-size:10.5px; color:var(--cyan); margin-top:2px; text-align:right; }
+.profileHead { display:flex; flex-direction:column; align-items:center; margin-top:10px; }
+.profileAvatar { width:80px; height:80px; border-radius:22px; background:var(--surface-raised); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-family:'Sora',sans-serif; font-weight:800; font-size:26px; color:var(--text-mid); }
+.profileName { font-family:'Sora',sans-serif; font-weight:700; font-size:18px; margin-top:12px; }
+.profileTag { font-size:12px; color:var(--text-low); margin-top:4px; display:flex; align-items:center; gap:6px; }
+.kycBadge { background:var(--cyan-dim); color:var(--cyan); font-size:10px; font-weight:700; padding:3px 8px; border-radius:6px; }
+.menuRow { display:flex; align-items:center; gap:13px; padding:14px 4px; border-bottom:1px solid var(--line); font-size:13px; font-weight:500; cursor:pointer; }
+.mi { width:32px; height:32px; border-radius:9px; background:var(--surface); display:flex; align-items:center; justify-content:center; border:1px solid var(--line); color:var(--text-mid); }
+.arrow { margin-left:auto; color:var(--text-low); font-size:18px; }
+.modalHead { display:flex; align-items:center; gap:12px; }
+.modalIcon { width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:800; flex:none; background:var(--surface-raised); border:1px solid var(--line); font-family:'Sora',sans-serif; color:var(--accent); }
+.modalTitle { font-family:'Sora',sans-serif; font-weight:700; font-size:16px; }
+.modalCat { font-size:11.5px; color:var(--text-low); margin-top:2px; }
+.modalDesc { font-size:13px; color:var(--text-mid); line-height:1.6; margin-top:14px; }
+.modalStats { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:16px; }
+.mStat { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:11px; }
+.investBtn { width:100%; margin-top:18px; padding:14px; border-radius:14px; border:1px solid rgba(30,86,227,0.4); font-weight:700; font-size:14px; background:var(--accent); color:#fff; cursor:pointer; }
+.investBtn:disabled { opacity:0.5; cursor:not-allowed; }
+.warningBox { margin-top:14px; padding:12px; border-radius:12px; background:rgba(245,197,107,0.08); border:1px solid rgba(245,197,107,0.2); font-size:11.5px; color:var(--gold); line-height:1.5; }
+
+/* Wallet hero */
+.walletHero { background:linear-gradient(135deg, var(--surface-raised) 0%, var(--surface) 100%); border:1px solid var(--line); border-radius:20px; padding:24px 20px 18px; margin-top:6px; }
+.walletLabel { font-size:11px; color:var(--text-low); text-transform:uppercase; letter-spacing:0.08em; }
+.walletAmount { font-family:'Sora',sans-serif; font-weight:800; font-size:32px; margin-top:8px; color:var(--text-hi); letter-spacing:-0.02em; }
+.walletAmount span { font-size:16px; font-weight:600; color:var(--text-mid); }
+.walletRow { display:flex; align-items:center; margin-top:18px; padding-top:14px; border-top:1px solid var(--line); }
+.walletStat { flex:1; text-align:center; }
+.walletStatVal { font-family:'Sora',sans-serif; font-weight:700; font-size:15px; }
+.walletStatLbl { font-size:10px; color:var(--text-low); margin-top:3px; text-transform:uppercase; letter-spacing:0.05em; }
+.walletDivider { width:1px; height:30px; background:var(--line); }
+
+/* Position card */
+.posCard { background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:14px 16px; margin-bottom:10px; }
+.posHeader { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.posIcon { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; background:var(--accent-dim); border:1px solid rgba(79,114,255,0.2); color:var(--accent); font-family:'Sora',sans-serif; }
+.posTitle { font-family:'Sora',sans-serif; font-weight:700; font-size:14px; flex:1; }
+.posBadge { font-size:10px; font-weight:700; padding:4px 10px; border-radius:8px; background:var(--surface-raised); border:1px solid var(--line); color:var(--text-mid); text-transform:uppercase; letter-spacing:0.04em; }
+.posGrid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.posCell { background:var(--surface-raised); border-radius:10px; padding:10px 12px; }
+.posCellLbl { font-size:9.5px; color:var(--text-low); text-transform:uppercase; letter-spacing:0.04em; }
+.posCellVal { font-family:'Sora',sans-serif; font-weight:700; font-size:14px; margin-top:4px; }
+
+/* Empty state */
+.emptyState { display:flex; flex-direction:column; align-items:center; padding:40px 20px; }
+.emptyIcon { width:60px; height:60px; border-radius:50%; background:var(--surface-raised); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-family:'Sora',sans-serif; font-size:24px; font-weight:800; color:var(--text-low); margin-bottom:12px; }
+.emptyText { font-size:13px; color:var(--text-low); margin-bottom:16px; }
+
+/* Platform row (accueil) */
+.platformRow { display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:14px; background:var(--surface); border:1px solid var(--line); margin-bottom:8px; cursor:pointer; transition:border-color .18s; }
+.platformRow:active { border-color:var(--accent); }
+.platformInfo { flex:1; min-width:0; }
+.platformName { font-family:'Sora',sans-serif; font-weight:700; font-size:14px; }
+.platformSub { font-size:11px; color:var(--text-low); margin-top:2px; }
+.platformRate { text-align:right; }
+
+/* Position card footer */
+.posFooter { margin-top:10px; padding-top:10px; border-top:1px solid var(--line); font-size:11px; color:var(--text-low); text-align:center; }
+.posFooter b { color:var(--text-mid); font-weight:700; }
+
+/* Revenue hero */
+.revenueHero { background:linear-gradient(135deg, rgba(0,232,196,0.06) 0%, var(--surface) 100%); border:1px solid rgba(0,232,196,0.15); border-radius:20px; padding:24px 20px; margin-top:6px; }
+.revenueAmount { font-family:'Sora',sans-serif; font-weight:800; font-size:28px; margin-top:8px; color:var(--cyan); }
+.revenueAmount span { font-size:14px; font-weight:600; color:var(--text-mid); }
+.revenueNote { font-size:12px; color:var(--text-low); margin-top:6px; }
+
+/* Revenue breakdown */
+.revenueBreakdown { margin-top:8px; }
+.revLine { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--line); font-size:12.5px; color:var(--text-mid); }
+.revLine:last-child { border-bottom:none; }
+.revVal { font-family:'Sora',sans-serif; font-weight:600; }
+.revValNeg { font-family:'Sora',sans-serif; font-weight:600; color:#f87171; }
+.revValGreen { font-family:'Sora',sans-serif; font-weight:700; color:var(--cyan); }
+.revTotal { padding-top:10px; margin-top:4px; border-top:1px dashed var(--line); border-bottom:none; font-weight:600; color:var(--text-hi); }
+
+/* Rules card */
+.rulesCard { margin-top:16px; padding:16px; background:var(--surface); border:1px solid var(--line); border-radius:16px; }
+.rulesTitle { font-family:'Sora',sans-serif; font-weight:700; font-size:13px; margin-bottom:12px; }
+.ruleItem { display:flex; align-items:center; gap:10px; font-size:12px; color:var(--text-mid); padding:6px 0; }
+.ruleDot { width:6px; height:6px; border-radius:50%; background:var(--cyan); flex:none; }
+
+/* Profile card */
+.profileCard { display:flex; flex-direction:column; align-items:center; padding:24px 20px; background:var(--surface); border:1px solid var(--line); border-radius:20px; margin-top:6px; }
+.profileEmail { font-size:12px; color:var(--text-low); margin-top:4px; }
+
+/* Referral */
+.referralCard { background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:18px; text-align:center; }
+.referralLabel { font-size:11px; color:var(--text-low); text-transform:uppercase; letter-spacing:0.06em; }
+.referralCode { font-family:'Sora',sans-serif; font-weight:800; font-size:24px; color:var(--accent); margin-top:8px; letter-spacing:0.05em; }
+.referralNote { font-size:11.5px; color:var(--text-low); margin-top:10px; line-height:1.4; }
+
+/* Menu improved */
+.menuText { flex:1; }
+.menuTitle { font-size:13px; font-weight:600; }
+.menuSub { font-size:11px; color:var(--text-low); margin-top:1px; }
+
+/* Referral hero */
+.referralHero { background:linear-gradient(135deg, rgba(79,114,255,0.06) 0%, var(--surface) 100%); border:1px solid rgba(79,114,255,0.15); border-radius:20px; padding:22px 20px 16px; }
+
+/* Gauge */
+.gaugeWrap { margin-top:12px; }
+.gaugeBar { height:8px; border-radius:4px; background:var(--surface-raised); border:1px solid var(--line); overflow:hidden; }
+.gaugeFill { height:100%; border-radius:4px; background:linear-gradient(90deg, var(--accent), var(--cyan)); transition:width .4s; }
+.gaugeLabel { font-size:11px; color:var(--text-low); margin-top:6px; text-align:center; }
+
+/* ── Plan Familial ────────────────────────────────────── */
+.treeWrap { margin-top: 4px; }
+.treeScroll { width: 100%; overflow-x: auto; overflow-y: hidden; padding: 10px 0 4px 0; -webkit-overflow-scrolling: touch; }
+.treeLegend { display: flex; gap: 16px; justify-content: center; margin-top: 10px; margin-bottom: 4px; }
+.legItem { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-mid); }
+.legDot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+.shareRow { display: flex; gap: 10px; margin-top: 16px; }
+.copyBtn { flex: 1; padding: 12px; border-radius: 14px; border: 1px solid rgba(30,86,227,0.4); font-weight: 700; font-size: 13px; background: var(--accent); color: #fff; }
+.shareBtn { flex: 1; padding: 12px; border-radius: 14px; border: 1px solid rgba(30,86,227,0.3); font-weight: 700; font-size: 13px; background: rgba(30,86,227,0.12); color: var(--accent); }
+.refLinkBox { margin-top: 12px; background: rgba(30,86,227,0.07); border: 1px solid rgba(30,86,227,0.2); border-radius: 12px; padding: 10px 14px; }
+.refLinkLabel { font-size: 10px; color: var(--text-low); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
+.refLinkText { font-size: 11.5px; color: var(--cyan); word-break: break-all; }
+
+/* Balance card */
+.balanceCard { position:relative; border-radius:20px; padding:24px 20px; background:var(--surface-raised); border:1px solid var(--line); }
+.balanceTop { display:flex; align-items:center; justify-content:space-between; }
+.balanceTag { font-size:11px; color:var(--text-low); letter-spacing:0.08em; text-transform:uppercase; display:flex; align-items:center; gap:6px; }
+.eyeBtn { width:28px; height:28px; border-radius:8px; background:transparent; display:flex; align-items:center; justify-content:center; border:1px solid var(--line); }
+.balanceAmount { font-family:'Sora',sans-serif; font-weight:800; font-size:32px; margin-top:14px; letter-spacing:-0.02em; color:var(--text-hi); }
+.quickActions { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:20px; }
+.qaItem { display:flex; flex-direction:column; align-items:center; gap:7px; cursor:pointer; }
+.qaCircle { width:48px; height:48px; border-radius:14px; background:var(--surface); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; transition:background .15s; }
+.qaItem:active .qaCircle { background:var(--accent-dim); }
+.qaLabel { font-size:10.5px; color:var(--text-mid); font-weight:600; }
+
+/* Transactions */
+.txRow { display:flex; align-items:center; gap:12px; padding:12px; border-radius:14px; background:var(--surface); border:1px solid var(--line); margin-bottom:8px; animation:rise .4s both; }
+.txIcon { width:38px; height:38px; border-radius:10px; flex:none; display:flex; align-items:center; justify-content:center; font-size:15px; }
+.txIn { background:var(--cyan-dim); }
+.txOut { background:var(--accent-dim); }
+.txInfo { flex:1; min-width:0; }
+.txName { font-size:13px; font-weight:600; }
+.txDate { font-size:11px; color:var(--text-low); margin-top:2px; }
+.txAmount { font-family:'Sora',sans-serif; font-weight:700; font-size:13.5px; }
+.pos { color:var(--cyan); }
+.neg { color:var(--text-mid); }
+
+/* Modal inputs */
+.modalInputWrap { margin-top: 14px; }
+.modalInputLabel { display:block; font-size:11px; font-weight:600; color:var(--text-mid); text-transform:uppercase; letter-spacing:.05em; margin-bottom:6px; }
+.modalInput { width:100%; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:13px 14px; color:var(--text-hi); font-size:17px; font-family:'Sora',sans-serif; font-weight:700; outline:none; margin-bottom:0; box-sizing:border-box; }
+.modalInput:focus { border-color:var(--accent); }
+.submitBtn { width:100%; padding:14px; border-radius:14px; border:1px solid rgba(30,86,227,0.4); background:var(--accent); color:#fff; font-weight:700; font-size:14px; }
+.submitBtn:disabled { opacity:0.5; }
+.uploadLabel { display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; border-radius:12px; border:2px dashed rgba(56,189,248,0.3); background:rgba(56,189,248,0.05); color:var(--cyan); font-weight:600; font-size:13px; cursor:pointer; transition:all .2s; }
+.uploadLabel:hover { background:rgba(56,189,248,0.1); border-color:rgba(56,189,248,0.5); }
+
+/* Back button */
+.backBtn { width:36px; height:36px; border-radius:10px; background:var(--surface); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--text-mid); margin-right:10px; flex:none; }
+
+/* Step card */
+.stepCard { display:flex; gap:14px; background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:16px; margin-bottom:12px; }
+.stepNum { width:28px; height:28px; border-radius:8px; background:var(--accent); color:#fff; font-family:'Sora',sans-serif; font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center; flex:none; margin-top:1px; }
+.stepContent { flex:1; min-width:0; }
+.stepTitle { font-family:'Sora',sans-serif; font-weight:700; font-size:13.5px; margin-bottom:6px; }
+.stepDesc { font-size:12px; color:var(--text-low); line-height:1.5; margin-bottom:10px; }
+.stepNote { font-size:11px; color:var(--text-low); margin-top:8px; text-align:center; }
+
+/* Phone button */
+.phoneBtnRow { display:flex; gap:10px; margin-top:4px; }
+.phoneBtn { flex:1; display:flex; align-items:center; justify-content:center; gap:10px; padding:14px 10px; border-radius:14px; color:#fff; font-family:'Sora',sans-serif; font-weight:700; font-size:13px; text-decoration:none; border:none; }
+.phoneBtn:active { opacity:0.82; }
+.phoneBtnMtn { background:linear-gradient(135deg,#FFCC00,#E6A800); color:#1a1000 !important; }
+.phoneBtnMtn svg { stroke:#1a1000; }
+.phoneBtnOrange { background:linear-gradient(135deg,#FF6600,#CC4400); }
+.phoneEmpty { flex:1; padding:13px; border-radius:14px; background:var(--surface-raised); border:1px dashed var(--line); color:var(--text-low); font-size:11.5px; text-align:center; display:flex; align-items:center; justify-content:center; }
+
+/* Info box */
+.infoBox { background:rgba(245,197,107,0.07); border:1px solid rgba(245,197,107,0.2); border-radius:14px; padding:14px 16px; }
+.infoRow { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--text-mid); padding:4px 0; }
+.infoDot { width:5px; height:5px; border-radius:50%; background:var(--gold); flex:none; }
+
+/* Fee preview */
+.feePreview { margin-top:10px; background:var(--surface-raised); border:1px solid var(--line); border-radius:12px; padding:12px; }
+.feeRow { display:flex; justify-content:space-between; font-size:12.5px; color:var(--text-mid); padding:5px 0; border-bottom:1px solid var(--line); }
+.feeRow:last-child { border-bottom:none; }
+.feeNeg { color:#f87171; font-weight:600; font-family:'Sora',sans-serif; }
+.feePos { color:var(--cyan); font-weight:700; font-family:'Sora',sans-serif; }
+.feeTotal { font-weight:600; color:var(--text-hi); }
+
+/* Profile name */
+.profileName { font-family:'Sora',sans-serif; font-weight:700; font-size:17px; margin-top:10px; }
+
+/* Countdown banner */
+.countdownBanner { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-radius: 14px; background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.20); margin: 12px 0 4px; }
+.countdownLabel { font-size: 11px; color: var(--text-low); text-transform: uppercase; letter-spacing: 0.06em; }
+.countdownTime { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 18px; color: var(--accent); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+
+/* Live ticker */
+.tickerBox { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 10px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.18); margin-bottom: 10px; }
+.tickerLabel { font-size: 10px; color: var(--text-low); text-transform: uppercase; letter-spacing: 0.06em; }
+.tickerVal { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; color: var(--cyan); font-variant-numeric: tabular-nums; }
+
+/* Filleul row */
+.filleulRow { display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:14px; background:var(--surface); border:1px solid var(--line); margin-bottom:8px; }
+.filleulAvatar { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; background:var(--surface-raised); border:1px solid var(--line); color:var(--accent); font-family:'Sora',sans-serif; flex:none; }
+.filleulInfo { flex:1; min-width:0; }
+.filleulName { font-size:13px; font-weight:600; }
+.filleulDate { font-size:11px; color:var(--text-low); margin-top:1px; }
+.filleulBadge { font-size:9.5px; font-weight:700; padding:4px 8px; border-radius:6px; background:rgba(0,232,196,0.1); color:var(--cyan); text-transform:uppercase; letter-spacing:0.04em; }
+
+.communityCard { margin-top: 14px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.communityActions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.telegramBtn,
+.whatsappBtn { display: flex; align-items: center; justify-content: center; min-height: 42px; border-radius: 13px; font-size: 12.5px; font-weight: 800; text-decoration: none; color: #fff; }
+.telegramBtn { background: linear-gradient(135deg, #229ed9, #1379ad); }
+.whatsappBtn { background: linear-gradient(135deg, #25d366, #128c7e); }
+.statusPill { flex: none; font-size: 10px; font-weight: 800; padding: 5px 8px; border-radius: 8px; background: rgba(245,197,107,0.10); color: var(--gold); text-align: center; }
+.termsSheet { width: min(92vw, 460px); max-height: 82vh; overflow: hidden; display: flex; flex-direction: column; border-radius: 22px; background: var(--surface-raised); border: 1px solid var(--line); padding: 18px; box-shadow: 0 24px 70px rgba(0,0,0,.42); }
+.termsText { margin: 14px 0 16px; padding: 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); overflow-y: auto; white-space: pre-wrap; font-size: 12px; line-height: 1.6; color: var(--text-mid); }
